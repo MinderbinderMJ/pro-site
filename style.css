@@ -505,3 +505,53 @@ footer a {
         padding: 8px 10px;
     }
 }
+
+
+/* ===== Gold Accent Styling ===== */
+h2 {
+    border-bottom: 2px solid #C8A951;
+    padding-bottom: 0.35rem;
+    display: inline-block;
+}
+
+.announcement-callout {
+    border-left-color: #C8A951;
+}
+
+nav .nav-links a.active {
+    border-bottom: 2px solid #C8A951;
+    padding-bottom: 2px;
+}
+
+.keyword {
+    border: 1px solid #C8A951;
+    color: #333;
+}
+
+.teaching-award {
+    border-left: 3px solid #C8A951;
+}
+
+.dissertation-box {
+    border-top: 3px solid #C8A951;
+}
+
+/* ===== Contact Button Styling ===== */
+.contact-buttons a {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    margin: 0.3rem 0.3rem 0.3rem 0;
+    border: 1.5px solid #501214;
+    border-radius: 4px;
+    color: #501214;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.contact-buttons a:hover {
+    background-color: #501214;
+    color: #fff;
+    border-color: #501214;
+}
