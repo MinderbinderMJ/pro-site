@@ -507,6 +507,21 @@ footer a {
 }
 
 
+
+/* ===== Global Gold Nav Underline ===== */
+header {
+    border-bottom: 3px solid #C8A951;
+}
+
+/* ===== Connect Section Header ===== */
+.connect-header {
+    color: #C8A951;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
 /* ===== Gold Accent Styling ===== */
 h2 {
     border-bottom: 2px solid #C8A951;
@@ -541,17 +556,65 @@ nav .nav-links a.active {
     display: inline-block;
     padding: 0.45rem 1rem;
     margin: 0.3rem 0.3rem 0.3rem 0;
-    border: 1.5px solid #501214;
+    border: 1.5px solid #500000;
     border-radius: 4px;
-    color: #501214;
-    text-decoration: none;
+    color: #500000;
+    text-decoration: underline;
     font-size: 0.9rem;
     font-weight: 500;
+    background-color: #FFFFFF;
     transition: all 0.2s ease;
 }
-
 .contact-buttons a:hover {
-    background-color: #501214;
+    background-color: #500000;
     color: #fff;
-    border-color: #501214;
+    border-color: #500000;
+    text-decoration: underline;
 }
+
+/* ===== Keyword Tag White Text ===== */
+.keyword {
+    color: #FFFFFF !important;
+}
+
+/* ===== Sortable Table ===== */
+.evaluations-table th {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 1.2em;
+}
+.evaluations-table th .sort-arrow {
+    font-size: 0.7em;
+    margin-left: 0.3em;
+    opacity: 0.4;
+}
+.evaluations-table th.sort-active .sort-arrow {
+    opacity: 1;
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials-section {
+    margin-top: 2rem;
+}
+.testimonial {
+    border-left: 3px solid #C8A951;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: #333;
+    background: #fafafa;
+}
+.testimonial .attribution {
+    font-style: normal;
+    font-weight: 500;
+    color: #500000;
+    margin-top: 0.3rem;
+}
+
+/* ===== Future Directions Section ===== */
+.future-directions {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
