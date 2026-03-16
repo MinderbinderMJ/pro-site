@@ -1,2 +1,11 @@
+title: Michael J. Dwyer
+description: "Ph.D. Candidate in Supply Chain Management at Iowa State University. Research on crowdsourced logistics, platform worker behavior, and agent-based simulation."
+url: "https://michaeljdwyer.com"
+baseurl: ""
+
 plugins:
   - jekyll-sitemap
+
+exclude:
+  - README.md
+  - CNAME

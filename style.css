@@ -1,30 +1,507 @@
+/* =============================================
+   Michael J. Dwyer - Academic Personal Website
+   TAMIU Colors: Maroon #500000, Silver #CCCCCC
+   ============================================= */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background-color: #fdfdfd;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    color: #500000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #7a1a1a;
+    text-decoration: underline;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: #500000;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+nav .nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+nav .site-name {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 14px 0;
+    white-space: nowrap;
+}
+
+nav .site-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .site-name a:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0;
+}
+
+nav .nav-links li a {
+    color: #fff;
+    padding: 16px 20px;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease;
+}
+
+nav .nav-links li a:hover,
+nav .nav-links li a.active {
+    background-color: rgba(255,255,255,0.15);
+    text-decoration: none;
+}
+
+nav .nav-links li a.active {
+    border-bottom: 3px solid #CCCCCC;
+}
+
+/* Hamburger menu (mobile) */
+nav .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 14px 0;
+}
+
+/* --- Main Content --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* --- About Page: Two-Column Layout --- */
+.about-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-photo {
+    flex: 0 0 320px;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.about-text h1 {
+    font-size: 2rem;
+    color: #500000;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.about-text .title-line {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.announcement-callout {
+    font-size: 0.95rem;
+    color: #500000;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    background-color: #faf5f5;
+    border-left: 4px solid #500000;
+    line-height: 1.5;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.about-contact {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.about-contact a {
+    margin-right: 24px;
+    font-size: 0.95rem;
+}
+
+/* --- Page Headers --- */
+.page-header {
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #500000;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    color: #500000;
+    font-weight: 700;
+}
+
+/* --- Section Headings --- */
+h2 {
+    font-size: 1.35rem;
+    color: #500000;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* --- Research Page --- */
+.research-interests {
+    background-color: #f9f6f6;
+    border-left: 4px solid #500000;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+}
+
+.research-interests p {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.research-interests strong {
+    color: #500000;
+}
+
+.dissertation-box {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 36px;
+}
+
+.dissertation-box .diss-title {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
     color: #333;
 }
 
-h1, h2 {
-    text-align: center;
-    margin-bottom: 0.3em;
+.dissertation-box .diss-meta {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.8;
 }
 
-ul {
+.publication-list {
     list-style: none;
     padding: 0;
 }
 
-ul li {
-    margin-bottom: 10px;
+.publication-list li {
+    margin-bottom: 18px;
+    padding-left: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
+.publication-list li .pub-number {
+    font-weight: 600;
+    color: #500000;
+}
+
+.publication-list .author-highlight {
+    font-weight: 700;
+}
+
+.publication-list .journal-name {
+    font-style: italic;
+}
+
+.publication-list .award-badge {
+    display: inline-block;
+    background-color: #500000;
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.pub-status {
+    font-size: 0.88rem;
+    color: #666;
+    display: block;
+    margin-top: 2px;
+}
+
+/* --- Teaching Page --- */
+.teaching-award {
+    background-color: #f9f6f6;
+    border-left: 4px solid #500000;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+}
+
+.teaching-award .award-text h3 {
+    margin: 0;
+    color: #500000;
+    font-size: 1.1rem;
+}
+
+.teaching-award .award-text p {
+    margin: 4px 0 0 0;
+    font-size: 0.92rem;
+    color: #555;
+}
+
+.teaching-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+}
+
+.teaching-table thead {
+    background-color: #500000;
+    color: #fff;
+}
+
+.teaching-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.teaching-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.teaching-table tbody tr:hover {
+    background-color: #faf8f8;
+}
+
+.teaching-table .rating {
+    font-weight: 600;
+    color: #500000;
+}
+
+/* --- CV Download Button --- */
+.cv-button {
+    display: inline-block;
+    background-color: #500000;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.cv-button:hover {
+    background-color: #7a1a1a;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- Methods Note --- */
+.methods-note {
+    font-size: 0.95rem;
+    color: #500000;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+/* --- Keyword Tags (Research Interests) --- */
+.research-interests h2.interests-heading {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+}
+
+.keyword-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.keyword {
+    display: inline-block;
+    background-color: #500000;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* --- Resources Page --- */
+.page-intro {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.resource-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.resource-item:first-child {
+    padding-top: 0;
+}
+
+.resource-item h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+}
+
+.resource-item h3 a {
+    color: #500000;
+    font-weight: 600;
+}
+
+.resource-item h3 a:hover {
+    color: #7a1a1a;
+}
+
+.resource-item p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Footer --- */
 footer {
+    margin-top: 60px;
+    padding: 24px 30px;
+    background-color: #fafafa;
+    border-top: 1px solid #e0e0e0;
     text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #777;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+footer a {
+    color: #500000;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    nav .nav-container {
+        flex-wrap: wrap;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+    }
+
+    nav .nav-links li a {
+        padding: 12px 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .about-layout {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .about-photo {
+        flex: none;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 24px 16px;
+    }
+
+    .about-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .teaching-table {
+        font-size: 0.85rem;
+    }
+
+    .teaching-table th,
+    .teaching-table td {
+        padding: 8px 10px;
+    }
 }
