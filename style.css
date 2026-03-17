@@ -164,7 +164,7 @@ nav .menu-toggle {
 .about-contact {
     margin-top: 28px;
     padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
+    text-align: center;
 }
 
 .about-contact a {
@@ -593,6 +593,10 @@ nav .nav-links a.active {
 }
 
 /* ===== Contact Button Styling ===== */
+.contact-buttons {
+    text-align: center;
+}
+
 .contact-buttons a {
     display: inline-block;
     padding: 0.45rem 1rem;
@@ -731,6 +735,7 @@ nav .nav-links a.active {
     .contact-buttons {
         flex-wrap: wrap;
         gap: 0.5rem;
+        justify-content: center;
     }
 
     .contact-buttons a {
