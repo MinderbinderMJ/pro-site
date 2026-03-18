@@ -22,7 +22,6 @@ a {
     text-decoration: none;
     transition: color 0.2s ease;
 }
-
 a:hover {
     color: #7a1a1a;
     text-decoration: underline;
@@ -54,12 +53,10 @@ nav .site-name {
     padding: 14px 0;
     white-space: nowrap;
 }
-
 nav .site-name a {
     color: #fff;
     text-decoration: none;
 }
-
 nav .site-name a:hover {
     color: #CCCCCC;
     text-decoration: none;
@@ -166,10 +163,42 @@ nav .menu-toggle {
     padding-top: 20px;
     text-align: center;
 }
-
 .about-contact a {
     margin-right: 24px;
     font-size: 0.95rem;
+}
+
+/* --- Mobile Nav Links --- */
+.mobile-nav-links {
+    display: none;
+}
+
+/* --- Tagline Cluster --- */
+.tagline-cluster {
+    margin: 18px 0 22px 0;
+    line-height: 1.6;
+}
+
+.tagline-tier-1 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #500000;
+    font-style: italic;
+}
+
+.tagline-tier-1 .tagline-sep {
+    color: #C8A951;
+    font-weight: 400;
+    margin: 0 0.4em;
+    font-style: normal;
+}
+
+.tagline-tier-2 {
+    font-size: 0.93rem;
+    font-weight: 400;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
 }
 
 /* --- Page Headers --- */
@@ -371,7 +400,6 @@ h3 {
     margin-top: 20px;
     transition: background-color 0.2s ease;
 }
-
 .cv-button:hover {
     background-color: #7a1a1a;
     color: #fff;
@@ -431,7 +459,6 @@ h3 {
     padding: 20px 0;
     border-bottom: 1px solid #e8e8e8;
 }
-
 .resource-item:first-child {
     padding-top: 0;
 }
@@ -445,7 +472,6 @@ h3 {
     color: #500000;
     font-weight: 600;
 }
-
 .resource-item h3 a:hover {
     color: #7a1a1a;
 }
@@ -473,7 +499,6 @@ footer a {
 }
 
 /* --- Responsive --- */
-
 .highlight-statement {
     color: #500000;
     font-weight: bold;
@@ -486,65 +511,78 @@ footer a {
 .research-list li {
     margin-bottom: 1.5rem;
 }
-
 .research-list li:last-child {
     margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
+    .mobile-nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .mobile-nav-links a {
+        display: inline-block;
+        padding: 8px 18px;
+        border: 1.5px solid #500000;
+        border-radius: 4px;
+        color: #500000;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        background-color: #fff;
+        transition: all 0.2s ease;
+    }
+    .mobile-nav-links a:hover,
+    .mobile-nav-links a:active {
+        background-color: #500000;
+        color: #fff;
+    }
     nav .nav-container {
         flex-wrap: wrap;
     }
-
     nav .menu-toggle {
         display: block;
     }
-
     nav .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
     }
-
     nav .nav-links.open {
         display: flex;
     }
-
     nav .nav-links li a {
         padding: 12px 20px;
         border-top: 1px solid rgba(255,255,255,0.1);
     }
-
     .about-layout {
         flex-direction: column-reverse;
         gap: 24px;
     }
-
     .about-photo {
         flex: none;
         width: 200px;
         margin: 0 auto;
     }
-
     .container {
         padding: 24px 16px;
     }
-
     .about-text h1 {
         font-size: 1.6rem;
     }
-
     .teaching-table {
         font-size: 0.85rem;
     }
-
     .teaching-table th,
     .teaching-table td {
         padding: 8px 10px;
     }
 }
-
-
 
 /* ===== Global Gold Nav Underline ===== */
 header {
@@ -613,6 +651,7 @@ nav .nav-links a.active {
     background-color: #FFFFFF;
     transition: all 0.2s ease;
 }
+
 .contact-buttons a:hover {
     background-color: #500000;
     color: #fff;
@@ -682,6 +721,7 @@ nav .nav-links a.active {
 .testimonials-section {
     margin-top: 2rem;
 }
+
 .testimonial {
     border-left: 3px solid #C8A951;
     padding: 0.75rem 1rem;
@@ -690,6 +730,7 @@ nav .nav-links a.active {
     color: #333;
     background: #fafafa;
 }
+
 .testimonial .attribution {
     font-style: normal;
     font-weight: 500;
@@ -702,8 +743,6 @@ nav .nav-links a.active {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-
 
 /* ===== Additional Mobile Responsiveness ===== */
 @media (max-width: 768px) {
@@ -764,6 +803,14 @@ nav .nav-links a.active {
     h2 {
         font-size: 1.3rem;
     }
+
+    .tagline-tier-1 {
+        font-size: 0.95rem;
+    }
+
+    .tagline-tier-2 {
+        font-size: 0.88rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -778,4 +825,3 @@ nav .nav-links a.active {
         padding: 5px 10px;
     }
 }
-
